@@ -1,0 +1,5 @@
+{
+  "name": "libffi",
+  "sources": "fake_src",
+  "static_libraries": ["_build/lib/libffi.a"]
+}
