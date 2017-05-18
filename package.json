@@ -11,5 +11,26 @@
   "bugs": {
     "url": "https://github.com/libffi/libffi/issues"
   },
-  "homepage": "https://github.com/libffi/libffi#readme"
+  "homepage": "https://github.com/libffi/libffi#readme",
+  "exportedEnvVars": {
+    "LIBFFI_BUILD_DIR": {
+      "global": true,
+      "resolveAsRelativePath": true,
+      "val": "./_build/"
+    },
+    "LIBFFI_CFLAGS": {
+      "global": true,
+      "val": "-I$LIBFFI_BUILD_DIR/lib/libffi-3.2.1/include"
+    },
+    "LIBFFI_LIBS": {
+      "global": true,
+      "val": "-L$LIBFFI_BUILD_DIR/lib -lffi"
+    },
+    "LIBRARY_PATH": {
+      "global": true,
+      "resolveAsRelativePath": true,
+      "globalCollisionBehavior": "joinPath",
+      "val": "./_build/lib"
+    }
+  }
 }
