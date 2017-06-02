@@ -12,6 +12,9 @@
     "url": "https://github.com/libffi/libffi/issues"
   },
   "homepage": "https://github.com/libffi/libffi#readme",
+  "scripts": {
+    "postinstall": "mkdir -p _build/lib64 _build/lib && ./configure --enable-shared=no --prefix $(pwd)/_build && make && make install && cp -rf _build/lib64/. _build/lib"
+  },
   "exportedEnvVars": {
     "LIBFFI_BUILD_DIR": {
       "global": true,
